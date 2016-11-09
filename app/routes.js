@@ -1,13 +1,13 @@
 (function () {
     angular.module('pr270').config(configRoutes);
 
-    configRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
+    configRoutes.$inject = ['$stateProvider', ];
 
-    function configRoutes($stateProvider, $urlRouterProvider) {
+    function configRoutes($stateProvider) {
         $stateProvider
 
             .state('dashboardIndex', {
-                url: '/dashboard',
+                url: '',
                 views: {
                     'content': {
                         controller: 'DashboardController',
@@ -18,6 +18,6 @@
             });
 
 
-        $urlRouterProvider.otherwise('/dashboard');
+        //$urlRouterProvider.otherwise('/dashboard');
     }
 }());
