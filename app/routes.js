@@ -6,20 +6,16 @@
     function configRoutes($stateProvider, $urlRouterProvider) {
         $stateProvider
 
-        .state('dashboard',{
-            url:'',
-            templateUrl:'ng-html/components/dashboard/dashboard.view.html'
-        })
-            // .state('dashboardIndex', {
-            //     url: '/dashboard',
-            //     views: {
-            //         'content': {
-            //             controller: 'DashboardController',
-            //             controllerAs: 'vm',
-            //             templateUrl: 'ng-html/components/dashboard/dashboard.view.html'
-            //         }
-            //     }
-            // });
+            .state('dashboardIndex', {
+                url: '/dashboard',
+                views: {
+                    'content': {
+                        controller: 'DashboardController',
+                        controllerAs: 'vm',
+                        templateUrl: 'ng-html/components/dashboard/dashboard.view.html'
+                    }
+                }
+            });
 
 
         $urlRouterProvider.otherwise('/dashboard');
