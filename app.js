@@ -6,24 +6,34 @@
 (function () {
     angular.module('pr270').config(configRoutes);
 
-    configRoutes.$inject = ['$stateProvider', ];
+    configRoutes.$inject = ['$stateProvider','$urlRouterProvider' ];
 
-    function configRoutes($stateProvider) {
+    function configRoutes($stateProvider,$urlRouterProvider) {
+        
+
         $stateProvider
-
             .state('dashboardIndex', {
-                url: '',
+                url: '/dashboard',
                 views: {
                     'content': {
                         controller: 'DashboardController',
                         controllerAs: 'vm',
-                        templateUrl: 'ng-html/components/dashboard/dashboard.view.html'
+                        templateUrl: './ng-html/components/dashboard/dashboard.view.html'
                     }
-                }
+            }})
+             .state('menu', {
+                url: '/menu',
+                // views: {
+                //     'content': {
+                //         controller: 'DashboardController',
+                //         controllerAs: 'vm',
+                //         templateUrl: './ng-html/components/dashboard/dashboard.view.html'
+                //     }
+                // }    
             });
 
 
-        //$urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/dashboard');
     }
 }());
 
@@ -39,8 +49,8 @@
 
         var vm = this;
         (function () {
-                $log.log('dashboard initialization');
-            
+               // $log.log('dashboard initialization');
+            console.log('dashboard controller');
         }());
     }
 }());

@@ -10,8 +10,8 @@
 
         var vm = this;
         (function () {
-                $log.log('dashboard initialization');
-            
+               // $log.log('dashboard initialization');
+            console.log('dashboard controller');
         }());
     }
 }());
